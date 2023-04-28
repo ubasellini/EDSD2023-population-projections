@@ -1,6 +1,6 @@
 # EDSD 2023: Course on population projections
 
-This repository contains the materials for the [European Doctoral School of Demography](http://eds-demography.org) 2023 course on "Population projections". 
+This repository contains the materials for the [European Doctoral School of Demography](https://eaps.nl/edsd) 2023 course on "Population projections". 
 
 Start date: 02/05/2023
 
