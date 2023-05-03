@@ -1,5 +1,13 @@
+## -------------------------------------------- ##
+## EDSD 2022-2023: Population projections
+## Lecture 1
+## The constant exponential growth model
+## Date: 02/05/2023
+## Instructor: Ugofilippo Basellini
+## -------------------------------------------- ##
 
-## cleaning workspace
+
+## cleaning the workspace
 rm(list=ls(all=TRUE))
 
 ## starting populations & starting inputs
