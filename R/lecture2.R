@@ -76,4 +76,21 @@ sum(my.DF$NFx * my.DF$bFx,na.rm = T)
 
 ## population pyramid
 
+## long data type
+my.DF.long <- my.DF %>% 
+  select(AgeGroup,NFx,NFx5) %>% 
+  rename('1993'=NFx,'1998'=NFx5) %>% 
+  pivot_longer(-AgeGroup,names_to = "year",values_to = "population")
+
+## pyramid
+my.DF.long %>% 
+  ggplot(aes(x=AgeGroup,y=population,fill=year)) +
+  geom_bar(stat="identity",position = "dodge",color="black") +
+  coord_flip() +
+  ggtitle("Swedish female population")
+  
+  
+
+
+
 
