@@ -88,9 +88,27 @@ my.DF.long %>%
   geom_bar(stat="identity",position = "dodge",color="black") +
   coord_flip() +
   ggtitle("Swedish female population")
+
+
+## moving to males
+srbM <- SRB/(1+SRB)
+LM0 <- dta.swe$LMx[1]
   
-  
+my.DF <- my.DF %>% 
+  mutate(sMx=lead(LMx)/LMx,
+         NMx5 = lag(NMx*sMx),
+         sMx = ifelse(test = Age == 80,
+                      yes  = lead(LMx)/(LMx+lead(LMx)),
+                      no   = sMx),
+         NMx5 = ifelse(test = Age == 85,
+                       yes  = (NMx+lag(NMx))*lag(sMx),
+                       no   = NMx5),
+         bMx=srbM*LM0/(2*l0) *(Fx + sFx*lead(Fx)),
+         NMx5 = ifelse(test = Age == 0,
+                       yes  = sum(NFx * bMx,na.rm = T),
+                       no   = NMx5))
 
+## saving the data for tomorrow
+save.image("data/EDSD.lecture2.Rdata")
 
-
-
+## END
