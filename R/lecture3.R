@@ -2,7 +2,7 @@
 ## EDSD 2022-2023: Population projections
 ## Lecture 3
 ## Matrix projections
-## Date: 03/05/2023
+## Date: 04/05/2023
 ## Instructor: Ugofilippo Basellini
 ## -------------------------------------------- ##
 
@@ -16,7 +16,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 ## loading useful packages
 library(tidyverse)
 
-## loading the data (derived from Preston et al. 2001)
+## loading yesterday's data 
 load("data/EDSD.lecture2.Rdata")
 
 ## output from yesterday
